@@ -4,6 +4,11 @@ import org.testng.annotations.Test;
 
 public class ContactTest extends BaseTest {
 
+    /**
+     * Check contact exist in contact list test.
+     *
+     * @throws InterruptedException the interrupted exception
+     */
     @Test
     public void checkContactExistInContactListTest() throws InterruptedException {
         Contact contact1 = new Contact();
@@ -24,6 +29,11 @@ public class ContactTest extends BaseTest {
         Assert.assertEquals(contactListPage.getExistContactOwnerByContactName(contact1.getLastName()), "ACher");
     }
 
+    /**
+     * Check contact data on contact page test.
+     *
+     * @throws InterruptedException the interrupted exception
+     */
     @Test
     public void checkContactDataOnContactPageTest() throws InterruptedException {
         Contact contact2 = new Contact();

@@ -20,15 +20,32 @@ public class NewContactModalWindow extends BasePage implements IConstants {
     @FindBy(xpath = "//*[@name='CancelEdit']")
     public WebElement cancelButton;
 
+    /**
+     * Instantiates a new New contact modal window.
+     *
+     * @param driver the driver
+     */
     public NewContactModalWindow(WebDriver driver) {
         super(driver);
     }
 
+    /**
+     * Open page new contact modal window.
+     *
+     * @param url the url
+     * @return the new contact modal window
+     */
     public NewContactModalWindow openPage(String url){
         driver.get(url);
         return this;
     }
 
+    /**
+     * Create contact with exit.
+     *
+     * @param contact the contact
+     * @throws InterruptedException the interrupted exception
+     */
     public void createContactWithExit(Contact contact) throws InterruptedException {
         new Input(driver, "First Name").writeTextInInput(contact.getFirstName());
         new Input(driver, "Last Name").writeTextInInput(contact.getLastName());
