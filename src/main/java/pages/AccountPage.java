@@ -14,6 +14,4 @@ public class AccountPage extends BasePage implements IConstants {
     public String getFieldValueByName(String name){
         return driver.findElement(By.xpath(String.format(DATA_BY_LABEL_XPATH, name))).getText();
     }
-
-
 }

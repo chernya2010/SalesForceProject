@@ -22,6 +22,9 @@ public class BaseTest implements ITestCostants, IConstants {
     LoginPage loginPage;
     NewAccountModalWindow newAccountModalWindow;
     NumberGenerator numberGenerator;
+    ContactPage contactPage;
+    ContactListPage contactListPage;
+    NewContactModalWindow newContactModalWindow;
 
     public void initPages(){
         accountPage = new AccountPage(driver);
@@ -29,6 +32,9 @@ public class BaseTest implements ITestCostants, IConstants {
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
         newAccountModalWindow = new NewAccountModalWindow(driver);
+        contactPage = new ContactPage(driver);
+        contactListPage = new ContactListPage(driver);
+        newContactModalWindow = new NewContactModalWindow(driver);
     }
 
     public void initUtils(){

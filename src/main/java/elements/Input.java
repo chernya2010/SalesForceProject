@@ -8,7 +8,7 @@ public class Input {
     String label;
 
     private static final String INPUT_XPATH = "//*[contains(text(),'%s')]/ancestor::div[contains(@part,'input-text')]//input";
-    private static final String TEXTAREA_XPATH = "//*[contains(text(),'Description')]/ancestor::*[contains(@slot,'inputField')]//textarea";
+    private static final String TEXTAREA_XPATH = "//*[contains(text(),'%s')]/ancestor::*[contains(@slot,'inputField')]//textarea";
 
     public Input(WebDriver driver, String label) {
         this.driver = driver;
