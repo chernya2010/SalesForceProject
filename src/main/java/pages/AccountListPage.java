@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AccountListPage extends BasePage implements IConstants {
     public static final String ACCOUNT_NAME_FIELD_XPATH = "//*[contains(@title,'%s')]";
-    public static final String PHONE_FIELD_XPATH = "//*[contains(@title,'qwe')]/ancestor::tbody//span[contains(@class,'forceOutputPhone')]";
+    public static final String PHONE_FIELD_XPATH = "//*[contains(@title,'%s')]/ancestor::tbody//span[contains(@class,'forceOutputPhone')]";
     public static final String ACCOUNT_OWNER_BY_ACCOUNT_NAME_FIELD_XPATH = "//*[contains(@title,'%s')]/ancestor::tr//span[contains(@class,'uiOutputText')]";
 
 
@@ -23,8 +23,8 @@ public class AccountListPage extends BasePage implements IConstants {
         return driver.findElement(By.xpath(String.format(ACCOUNT_NAME_FIELD_XPATH, accountName))).getText();
     }
 
-    public String getExistPhoneByAccountName(String phone){
-        return driver.findElement(By.xpath(String.format(PHONE_FIELD_XPATH, phone))).getText();
+    public String getExistPhoneByAccountName(String accountName){
+        return driver.findElement(By.xpath(String.format(PHONE_FIELD_XPATH, accountName))).getText();
     }
 
     public String getExistAccountOwnerByAccountName(String accountOwner){
